@@ -88,7 +88,29 @@ void ex3() {
 }
 
 void ex4() {
+    printf("Informe o raio:\n");
+    float radius;
+    scanf("%f", &radius);
+    if (!isValid(radius)) {
+        printf("Raio invalida.");
+        return;
+    }
+    printf("Informe a altura:\n");
 
+    float height;
+    scanf("%f", &height);
+    if (!isValid(height)) {
+        printf("Altura invalida.");
+        return;
+    }
+    double area = calculateCilinderArea(radius, height);
+    printf("Informe o total de cilindros");
+    int total;
+    scanf("%d", &total);
+    if (!isValid(total)) {
+        printf("Quantidade invalida.");
+        return;
+    }
 }
 
 void ex5() {
@@ -122,22 +144,31 @@ void execute(int ex) {
             break;
         case 2:
             ex2();
+            break;
         case 3:
             ex3();
+            break;
         case 4:
             ex4();
+            break;
         case 5:
             ex5();
+            break;
         case 6:
             ex6();
+            break;
         case 7:
             ex7();
+            break;
         case 8:
             ex8();
+            break;
         case 9:
             ex9();
+            break;
         case 10:
             ex10();
+            break;
         default:
             break;
     }
