@@ -173,7 +173,22 @@ void ex7() {
 }
 
 void ex8() {
-
+    printf("Informa a primeira nota do aluno");
+    float s1;
+    scanf("%f", &s1);
+    if (!isValid(s1)) {
+        printf("Primeira nota invalida.");
+        return;
+    }
+    printf("Informa a segunda nota do aluno");
+    float s2;
+    scanf("%f", &s2);
+    if (!isValid(s2)) {
+        printf("Segunda nota invalida.");
+        return;
+    }
+    float fs = (s1 + s2) / 2;
+    printf("Nota final = %f", fs);
 }
 
 void ex9() {
