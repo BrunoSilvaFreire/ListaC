@@ -192,11 +192,11 @@ void ex8() {
 }
 
 void ex9() {
-    printf("Informe o total de aulas");
+    printf("Informe o total de aulas.\n");
     int totalClasses;
     scanf("%d", &totalClasses);
 
-    printf("Informe o total de aulas presentes do aluno.");
+    printf("Informe o total de aulas presentes do aluno.\n");
     int totalPresentClasses;
     scanf("%d", &totalPresentClasses);
     float attendance = totalPresentClasses / totalClasses;
@@ -204,14 +204,14 @@ void ex9() {
         printf("Aluno reprovado por falta");
         return;
     }
-    printf("Informa a primeira nota do aluno");
+    printf("Informa a primeira nota do aluno\n");
     float s1;
     scanf("%f", &s1);
     if (!isValid(s1)) {
         printf("Primeira nota invalida.");
         return;
     }
-    printf("Informa a segunda nota do aluno");
+    printf("Informa a segunda nota do aluno\n");
     float s2;
     scanf("%f", &s2);
     if (!isValid(s2)) {
@@ -223,6 +223,35 @@ void ex9() {
 }
 
 void ex10() {
+    printf("Informe o peso da pessoa\n");
+    float weight;
+    scanf("%f", &weight);
+    if (!isValid(weight)) {
+        printf("Peso invalido");
+        return;
+    }
+    printf("Informe a altura da pessoa\n");
+    float height;
+    scanf("%f", &height);
+    if (!isValid(height)) {
+        printf("Altura invalida");
+        return;
+    }
+    float imc = (float) (weight / pow(height, 2));
+    printf("IMC = %f\n", imc);
+    printf("Resultado = ");
+    if (imc > 40) {
+        printf("Obesidade morbida");
+    } else if (imc > 30) {
+        printf("Obeso");
+    } else if (imc > 20) {
+        printf("Sobre Peso");
+    } else if (imc > 20) {
+        printf("Peso normal");
+    } else {
+        printf("Abaixo do peso");
+    }
+
 }
 
 /**
