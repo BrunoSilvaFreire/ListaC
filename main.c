@@ -42,6 +42,25 @@ void ex1() {
 }
 
 void ex2() {
+    printf("Informe a idade da pessoa:\n");
+    int idade;
+    scanf("%d", &idade);
+    if (!isValid(idade)) {
+        printf("Idade invalida.");
+        return;
+    }
+
+    if (idade >= 18) {
+        if (idade >= 65) {
+            printf("A pessoa e idosa.");
+
+        } else {
+            printf("A pessoa e maior de idade.");
+
+        }
+    } else {
+        printf("A pessoa e menor de idade.");
+    }
 
 }
 
