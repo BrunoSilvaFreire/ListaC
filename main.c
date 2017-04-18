@@ -126,7 +126,15 @@ void ex4() {
 }
 
 void ex5() {
-
+    printf("Informe o raio:\n");
+    float radius;
+    scanf("%f", &radius);
+    if (!isValid(radius)) {
+        printf("Raio invalida.");
+        return;
+    }
+    double area = M_PI * pow(radius, 2);
+    printf("A area e: %f", area);
 }
 
 void ex6() {
