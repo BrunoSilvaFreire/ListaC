@@ -111,6 +111,18 @@ void ex4() {
         printf("Quantidade invalida.");
         return;
     }
+    printf("Informe o preco unitario da lata de tinta:\n");
+    float price;
+    scanf("%f", &price);
+    if (!isValid(price)) {
+        printf("Preco invalido.");
+        return;
+    }
+    //Can't use modulus on float, someone will have to find a store that sells 32.3 paint buckets
+    float quantity = (float) (area / 5);
+    float totalPrice = quantity * price;
+    printf("A quantidade de latas e %f", quantity);
+    printf("O preco total e %f", totalPrice);
 }
 
 void ex5() {
