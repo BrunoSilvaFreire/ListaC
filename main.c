@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-//Sdd2s P.O.O.
+//Sdds P.O.O.
 
 void execute(int ex);
 
@@ -137,8 +137,18 @@ void ex5() {
     printf("A area e: %f", area);
 }
 
-void ex6() {
+float METERS_TO_INCHES_CONSTANT = 0.3937007874f;
 
+void ex6() {
+    printf("Informe a medida (m):\n");
+    float distance;
+    scanf("%f", &distance);
+    float inch = distance * METERS_TO_INCHES_CONSTANT;
+    float feet = inch * 12;
+    float yard = feet * 3;
+    printf("Polegadas = %f", distance);
+    printf("Pes = %f", feet);
+    printf("Yard = %f", yard);
 }
 
 void ex7() {
@@ -154,7 +164,6 @@ void ex9() {
 }
 
 void ex10() {
-
 }
 
 void execute(int ex) {
