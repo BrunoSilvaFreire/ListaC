@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <math.h>
 //Sdd2s P.O.O.
 
 void execute(int ex);
@@ -49,7 +49,6 @@ void ex2() {
         printf("Idade invalida.");
         return;
     }
-
     if (idade >= 18) {
         if (idade >= 65) {
             printf("A pessoa e idosa.");
@@ -64,8 +63,28 @@ void ex2() {
 
 }
 
-void ex3() {
+double calculateCilinderArea(float radius, float height) {
+    return 2 * M_PI * radius * (radius + height);
+}
 
+void ex3() {
+    printf("Informe o raio:\n");
+    float radius;
+    scanf("%f", &radius);
+    if (!isValid(radius)) {
+        printf("Raio invalida.");
+        return;
+    }
+    printf("Informe a altura:\n");
+
+    float height;
+    scanf("%f", &height);
+    if (!isValid(height)) {
+        printf("Altura invalida.");
+        return;
+    }
+    double area = calculateCilinderArea(radius, height);
+    printf("A area e: %f", area);
 }
 
 void ex4() {
