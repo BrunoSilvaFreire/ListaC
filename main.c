@@ -43,14 +43,14 @@ void ex1() {
 
 void ex2() {
     printf("Informe a idade da pessoa:\n");
-    int idade;
-    scanf("%d", &idade);
-    if (!isValid(idade)) {
+    int age;
+    scanf("%d", &age);
+    if (!isValid(age)) {
         printf("Idade invalida.");
         return;
     }
-    if (idade >= 18) {
-        if (idade >= 65) {
+    if (age >= 18) {
+        if (age >= 65) {
             printf("A pessoa e idosa.");
 
         } else {
@@ -152,7 +152,24 @@ void ex6() {
 }
 
 void ex7() {
+    printf("Informe a idade da pessoa:\n");
+    int age;
+    scanf("%d", &age);
+    if (!isValid(age)) {
+        printf("Idade invalida.");
+        return;
+    }
+    if (age >= 16) {
+        if (age >= 65) {
+            printf("A pessoa e eleitor facultativo.");
 
+        } else {
+            printf("A pessoa e eleitor obrigatorio");
+
+        }
+    } else {
+        printf("A pessoa nao pode ser eleitor.");
+    }
 }
 
 void ex8() {
@@ -160,12 +177,15 @@ void ex8() {
 }
 
 void ex9() {
-
 }
 
 void ex10() {
 }
 
+/**
+ * I'm so sorry for this, so <b>so</b> sorry
+ * @param ex Exercise to execute
+ */
 void execute(int ex) {
     switch (ex) {
         case 1:
